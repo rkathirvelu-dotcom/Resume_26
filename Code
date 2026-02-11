@@ -1,0 +1,715 @@
+# Resume_2026
+Rahini's Product Manager Resume
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahini Kathirvelu — Product Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0f1419;
+            --charcoal: #2a2e35;
+            --slate: #5a6270;
+            --mist: #9ca3af;
+            --cream: #fdfcfb;
+            --offwhite: #f8f7f5;
+            --accent: #0066cc;
+            --accent-light: #3d8fd1;
+            --accent-bright: #0052a3;
+            --border: rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.025;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+        
+        .background-pattern {
+            position: fixed;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, 30px) rotate(5deg); }
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 100px 48px 120px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+            align-items: start;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        .header-content::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        header:hover .header-content::after {
+            width: 160px;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            color: var(--ink);
+            margin-bottom: 16px;
+            font-variation-settings: 'opsz' 120;
+        }
+        
+        h1 .last-name {
+            display: block;
+            margin-top: 4px;
+        }
+
+        .title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            color: var(--slate);
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 28px;
+            letter-spacing: 0.01em;
+            line-height: 1.5;
+        }
+        
+        .title-separator {
+            color: var(--mist);
+            margin: 0 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            font-size: 0.94rem;
+            color: var(--slate);
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--accent);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .contact-info a:hover::after {
+            width: 100%;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .profile-image-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .profile-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .profile-image-wrapper:hover::before {
+            top: -12px;
+            left: -12px;
+            right: 12px;
+            bottom: 12px;
+            border-color: var(--accent);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+            box-shadow: 0 8px 32px rgba(15, 20, 25, 0.1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-image:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0 16px 48px rgba(15, 20, 25, 0.15);
+        }
+
+        section {
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.15s; }
+        section:nth-child(3) { animation-delay: 0.25s; }
+        section:nth-child(4) { animation-delay: 0.35s; }
+        section:nth-child(5) { animation-delay: 0.45s; }
+        section:nth-child(6) { animation-delay: 0.55s; }
+
+        h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 2.75rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
+            font-variation-settings: 'opsz' 100;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .overview-text {
+            font-size: 1.125rem;
+            line-height: 1.85;
+            color: var(--charcoal);
+            max-width: 720px;
+            font-weight: 400;
+        }
+
+        .resume-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 36px;
+            background: var(--ink);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(15, 20, 25, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resume-download::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .resume-download:hover::before {
+            left: 100%;
+        }
+
+        .resume-download:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.25);
+        }
+        
+        .resume-download:active {
+            transform: translateY(-1px);
+        }
+
+        .experience-item {
+            margin-bottom: 56px;
+            padding-left: 28px;
+            border-left: 2px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 0;
+            width: 2px;
+            height: 0;
+            background: linear-gradient(180deg, var(--accent), var(--accent-light));
+            transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .experience-item:hover::before {
+            height: 100%;
+        }
+        
+        .experience-item:hover {
+            padding-left: 32px;
+        }
+
+        h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 8px;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
+        }
+
+        .role {
+            font-weight: 600;
+            color: var(--accent-bright);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+            letter-spacing: 0.01em;
+        }
+
+        .period {
+            color: var(--mist);
+            font-size: 0.92rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+            line-height: 1.75;
+            transition: all 0.3s ease;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        li:hover::before {
+            transform: translateX(4px);
+        }
+        
+        li:hover {
+            color: var(--ink);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .skill-category {
+            padding: 32px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, var(--accent), var(--accent-light));
+            transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .skill-category:hover::before {
+            height: 100%;
+        }
+
+        .skill-category:hover {
+            background: white;
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 102, 204, 0.1);
+        }
+
+        .skill-category h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .skill-category p {
+            color: var(--slate);
+            font-size: 0.97rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .education-item {
+            margin-bottom: 40px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .education-item:hover {
+            padding-left: 16px;
+        }
+
+        .education-item h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .education-item p {
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .degree {
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        .work-auth {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.04), rgba(0, 102, 204, 0.02));
+            border-left: 4px solid var(--accent);
+            border-radius: 6px;
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 12px rgba(0, 102, 204, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .work-auth:hover {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.06), rgba(0, 102, 204, 0.03));
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.1);
+        }
+
+        footer {
+            margin-top: 120px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--mist);
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.65s;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 64px 24px 80px;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .header-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .profile-image-wrapper {
+                width: 160px;
+                height: 160px;
+            }
+
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                margin-bottom: 72px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="background-pattern"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>
+                        Rahini
+                        <span class="last-name">Kathirvelu</span>
+                    </h1>
+                    <p class="title">Product Manager<span class="title-separator">·</span>AI<span class="title-separator">·</span>Health Tech<span class="title-separator">·</span>Early-Stage Products</p>
+                    <div class="contact-info">
+                        <span>📍 San Jose, CA</span>
+                        <a href="mailto:rkathirvelu@dons.usfca.edu">📫 rkathirvelu@dons.usfca.edu</a>
+                        <a href="#" target="_blank">🔗 LinkedIn</a>
+                    </div>
+                </div>
+                <div class="profile-image-wrapper">
+                    <img src="./rahini-photo.jpg" alt="Rahini Kathirvelu" class="profile-image">
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p class="overview-text">
+                Product Manager with experience building AI-enabled, health-tech, and early-stage products across strategy, discovery, and execution. Proven ability to turn ambiguous problem spaces into shipped prototypes and measurable outcomes. Background spans entrepreneurship, consulting, and user-centered design, with hands-on execution alongside engineering, design, and executive stakeholders.
+            </p>
+        </section>
+
+        <section>
+            <h2>Resume</h2>
+            <a href="./Rahini_K_Product_Manager_Resume.pdf" class="resume-download" download>📄 Download Resume (PDF)</a>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Apple × USF Malloy Group</h3>
+                <p class="role">Product Manager — Student Consultant</p>
+                <p class="period">Sep 2025 – Dec 2025</p>
+                <ul>
+                    <li>Led product strategy for an AI/ML workflow automating Jenkins build-failure analysis, reducing manual debugging effort.</li>
+                    <li>Defined product vision, roadmap, and success metrics for an LLM-integrated CI/CD pipeline.</li>
+                    <li>Built and coded a functional prototype to validate feasibility and developer adoption.</li>
+                    <li>Applied Design Thinking and Agile practices, managing sprints, user stories, and workflow documentation.</li>
+                    <li>Conducted feasibility and scalability analysis for enterprise-grade LLM deployment.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Meo Health</h3>
+                <p class="role">Product Manager Intern (Part-time)</p>
+                <p class="period">Jan 2026 – Present</p>
+                <ul>
+                    <li>Partnered with CEO and engineers to ship feature enhancements and new releases for a digital wellness platform.</li>
+                    <li>Ran user testing and usability studies, translating insights into prioritized product changes.</li>
+                    <li>Logged and triaged bugs and feature requests in Linear, ensuring predictable delivery.</li>
+                    <li>Synthesized customer support feedback into actionable product requirements.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Mariana AI</h3>
+                <p class="role">Product & Growth Specialist</p>
+                <p class="period">Oct 2024 – Mar 2025</p>
+                <ul>
+                    <li>Secured two hospital clients, generating $350K in new revenue.</li>
+                    <li>Improved email CTR by 2.3% and increased website conversion through funnel optimization.</li>
+                    <li>Streamlined onboarding workflows, accelerating adoption in the U.S. healthcare market.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Alte Moda</h3>
+                <p class="role">Co-Founder & COO</p>
+                <p class="period">May 2022 – Jul 2024</p>
+                <ul>
+                    <li>Led end-to-end product development of a Web3 digital fashion platform, from ideation to MVP.</li>
+                    <li>Defined product roadmap, revenue model, and financial projections.</li>
+                    <li>Managed cross-functional design and engineering teams; validated product–market fit through incubator participation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Product</h4>
+                    <p>Strategy, Roadmapping, Customer Discovery, PRDs, Agile/Scrum</p>
+                </div>
+                <div class="skill-category">
+                    <h4>AI</h4>
+                    <p>LLM-enabled products, experimentation, metrics-driven iteration</p>
+                </div>
+                <div class="skill-category">
+                    <h4>UX</h4>
+                    <p>Research, usability testing, prototyping</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <p>Linear, Jira, Figma, Notion, SQL, GA, Airtable, Fireflies.ai</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h4>University of San Francisco</h4>
+                <p class="degree">M.S. Entrepreneurship & Innovation (Merit Scholarship)</p>
+            </div>
+            <div class="education-item">
+                <h4>Polimoda, Florence</h4>
+                <p class="degree">M.Des Fashion Design</p>
+            </div>
+            <div class="education-item">
+                <h4>NIFT, India</h4>
+                <p class="degree">B.Des Fashion & Lifestyle Accessories</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Authorization</h2>
+            <div class="work-auth">
+                CPT & OPT Eligible
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Rahini Kathirvelu. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
